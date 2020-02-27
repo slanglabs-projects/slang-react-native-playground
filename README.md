@@ -20,7 +20,7 @@ You would need
 
 3 steps to get started with this project
 
-#### Step 1: Frist Download this code locally
+#### Step 1: First download this code locally
 
 ` $ git clone git@github.com:SlangLabs/react-native-slang-playground.git`
 
