@@ -36,7 +36,6 @@ import  FeaturesList  from './featureList';
       },
       body: {
         flex: 1,
-        // marginTop: 10,
         paddingLeft: 14,
         paddingRight: 20,
         backgroundColor: Colors.dark,
@@ -234,26 +233,7 @@ class Features extends Component {
 
           </Tab>
         </Tabs>
-    )
-        // switch (this.props.section) {
-        //   case 'features':
-        //     return <FeaturesList {...featuresListProps} />
-        //   case 'intent':
-        //     return <IntentTest {...testIntentProps} />
-        //   case 'settings':
-        //     return <Settings {...settingsProps} />
-        //   default:
-        //     return (
-        //       <Content>
-        //           <H2 style={styles.text} > Features List </H2>
-        //           <Button onPress={this.slangShow} rounded  transparent   bordered ><Text style={styles.text} >Show Slang</Text></Button>
-        //           <Button  onPress={this.slangHide} rounded  transparent   bordered ><Text style={styles.text} >Hide Slang</Text></Button>
-        //       </Content>
-        //   )
-            
-        // }
-
-        
+    )        
     }
 }
 

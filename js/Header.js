@@ -11,7 +11,6 @@ export default HeaderView = () => {
             <Subtitle>React Native</Subtitle>
           </Body>
           <Right>
-            
           </Right>
         </Header>
     );

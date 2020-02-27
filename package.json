@@ -1,5 +1,5 @@
 {
-  "name": "React Native Slang Playground",
+  "name": "react_native_slang_playground",
   "version": "0.0.1",
   "private": true,
   "scripts": {
@@ -25,6 +25,7 @@
     "eslint": "^6.5.1",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.56.0",
+    "prettier": "1.19.1",
     "react-test-renderer": "16.9.0"
   },
   "jest": {
