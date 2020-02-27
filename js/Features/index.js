@@ -95,7 +95,7 @@ class Features extends Component {
           Slang.setOnUtteranceDetected((utt) => this.setState({utterance: utt}))        
       }
       slangStartConversation = () => {
-        Slang.startConversation("Hi. I am the airtel app. What do you do ?")
+        Slang.startConversation("Hello and welcome to React Native Slang!")
       }
       slangShow = () => {
         Slang.ui.show();
