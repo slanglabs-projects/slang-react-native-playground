@@ -25,6 +25,8 @@
     "eslint": "^6.5.1",
     "jest": "^24.9.0",
     "metro-react-native-babel-preset": "^0.56.0",
+    "husky": "^4.2.3",
+    "lint-staged": "^10.0.8",
     "prettier": "1.19.1",
     "react-test-renderer": "16.9.0"
   },
@@ -38,8 +40,7 @@
   },
   "lint-staged": {
     "*.{js,json,css,md}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   }
 }
