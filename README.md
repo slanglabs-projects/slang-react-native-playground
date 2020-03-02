@@ -1,3 +1,4 @@
+![react-native-slang](https://raw.githubusercontent.com/SlangLabs/react-native-slang-playground/master/js/assets/logo.png)  
 # React Native Slang Playground (Android)
 
 
@@ -50,9 +51,37 @@ Once you successfully start the app on your device,
 go to the settings tab
 to add the Buddy ID and API key to load your [Slang Buddy](https://docs.slanglabs.in/slang/digging-deeper/building-buddies)
 
-The component that initialises slang is in  `js/Features/index.js`
+Or
 
-Open it in your favourite text editor and make changes.
+In the code, the component that initialises slang is in  [js/Features/index.js](https://raw.githubusercontent.com/SlangLabs/react-native-slang-playground/master/js/Features/index.js)
+
+Open it in your favourite text editor and make changes to load your buddy when the component mounts.
+
+
+```
+// Slang is initialised with the below function 
+// Add your buddy Id and API key to this function and run your app
+      Slang.initialize(
+        <buddyID>,
+        <APIKey>,
+        { 
+          "locale": "LOCALE_ENGLISH_IN", // Other possible values: LOCALE_HINDI_IN, LOCALE_ENGLISH_US
+          "position": "CENTER_BOTTOM", // Other possible values: LEFT_TOP, CENTER_TOP, RIGHT_TOP, CENTER, LEFT_BOTTOM, RIGHT_BOTTOM etc. 
+        }, 
+        // callback function once slang initialises successfully
+        () => { 
+          console.log("Slang initialized successfully");
+         // Do more things ... 
+       });
+   
+```
+
+
+![Playground App Initialised](https://raw.githubusercontent.com/SlangLabs/react-native-slang-playground/master/js/assets/screenshot1.png)  
+
+### Documentation
+
+You can find our documentation [here](https://docs.slanglabs.in/slang/getting-started/react-native-quick-start) if you would like to run react-native-slang in your app. 
 
 
 
