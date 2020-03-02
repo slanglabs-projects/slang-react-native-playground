@@ -10,6 +10,7 @@
     "lint": "eslint ."
   },
   "dependencies": {
+    "@react-native-community/async-storage": "^1.8.1",
     "install": "^0.13.0",
     "native-base": "^2.13.8",
     "react": "16.9.0",
@@ -23,7 +24,9 @@
     "@react-native-community/eslint-config": "^0.0.5",
     "babel-jest": "^24.9.0",
     "eslint": "^6.5.1",
+    "husky": "^4.2.3",
     "jest": "^24.9.0",
+    "lint-staged": "^10.0.8",
     "metro-react-native-babel-preset": "^0.56.0",
     "prettier": "1.19.1",
     "react-test-renderer": "16.9.0"
@@ -38,8 +41,7 @@
   },
   "lint-staged": {
     "*.{js,json,css,md}": [
-      "prettier --write",
-      "git add"
+      "prettier --write"
     ]
   }
 }
