@@ -35,32 +35,32 @@ class Features extends Component {
 
   //Method to initialise slang in this component
   initialize = () => {
-    const {buddyID, APIKey, isInit} = this.state;
+    const {buddyID, APIKey} = this.state;
 
     // check if buddy ID and API key is set before initialising
-    // if (buddyID && APIKey && buddyID !== '' && APIKey !== '') {
-    // Slang's initialise funcion
-    Slang.initialize(
-      buddyID,
-      APIKey,
-      {
-        locale: 'LOCALE_HINDI_IN', // Other possible values: LOCALE_HINDI_IN, LOCALE_ENGLISH_US
-        position: 'CENTER', // Other possible values: LEFT_TOP, CENTER_TOP, RIGHT_TOP, CENTER, LEFT_BOTTOM, RIGHT_BOTTOM etc.
-      },
-      // Callback when slang is initialised successfully
-      () => {
-        console.log('Slang initialized successfully');
-        // show slang if hidden before
-        Slang.ui.show();
-        // set isInit to Yes, this is displayed in the feature list on the app
-        this.setState({
-          isInit: true,
-        });
-      },
-    );
-    // } else {
-    //   console.log('Add your  buddy ID and API key in the app  menu settings');
-    // }
+    if (buddyID && APIKey && buddyID !== '' && APIKey !== '') {
+      // Slang's initialise funcion
+      Slang.initialize(
+        buddyID,
+        APIKey,
+        {
+          locale: 'LOCALE_HINDI_IN', // Other possible values: LOCALE_HINDI_IN, LOCALE_ENGLISH_US
+          position: 'CENTER', // Other possible values: LEFT_TOP, CENTER_TOP, RIGHT_TOP, CENTER, LEFT_BOTTOM, RIGHT_BOTTOM etc.
+        },
+        // Callback when slang is initialised successfully
+        () => {
+          console.log('Slang initialized successfully');
+          // show slang if hidden before
+          Slang.ui.show();
+          // set isInit to Yes, this is displayed in the feature list on the app
+          this.setState({
+            isInit: true,
+          });
+        },
+      );
+    } else {
+      console.log('Add your  buddy ID and API key in the app  menu settings');
+    }
   };
   async componentDidMount() {
     this.setState({
