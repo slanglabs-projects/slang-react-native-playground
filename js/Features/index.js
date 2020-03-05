@@ -8,9 +8,9 @@
 import React, {Component} from 'react';
 import Slang from 'react-native-slang';
 
-import {StyleSheet, ScrollView, Alert} from 'react-native';
+import {StyleSheet, ScrollView} from 'react-native';
 import {Icon, Text, Tab, Tabs, TabHeading} from 'native-base';
-import {storeData, getData} from '../Storege';
+import {storeData, getData} from '../Storage';
 
 import Colors from '../Colours';
 import Settings from './settings';
