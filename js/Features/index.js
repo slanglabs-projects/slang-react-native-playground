@@ -63,19 +63,29 @@ class Features extends Component {
     }
   };
   async componentDidMount() {
+    // Read from storage
+    const buddyName = (await getData('buddyName'))
+      ? await getData('buddyName')
+      : null;
+    const buddyID = (await getData('buddyID'))
+      ? await getData('buddyID')
+      : null;
+    const APIKey = (await getData('APIKey')) ? await getData('APIKey') : null;
+
     this.setState({
-      buddyName: await getData('buddyName'), // Add your buddy ID
-      buddyID: await getData('buddyID'), // Add your buddy ID
-      APIKey: await getData('APIKey'), // and API key here to auto load your buddy when the app starts
+      buddyName, // Add your Buddy Name
+      buddyID, // Add your Buddy ID
+      APIKey, // and API key here to auto load your buddy when the app starts
     });
 
     // check if slang is initialised
     const isInit = await Slang.isInitialized();
-    // if(!isInit) {
-    // call the initialise method when this component mounts,
-    // this is recommended when initialising slang in your own app
-    this.initialize();
-    // }
+
+    if (!isInit) {
+      // call the initialise method when this component mounts,
+      // this is recommended when initialising slang in your own app
+      this.initialize();
+    }
     // set the state of is slang initialised
     this.setState({
       isInit,
@@ -147,6 +157,7 @@ class Features extends Component {
     // Unmute the TTS
     Slang.tts.unmute();
   };
+
   intentActionHandler = () => {
     const {actionComplete} = this.state;
     // outputs the slang intent object (set in the action handler above ) to the console.log
@@ -162,6 +173,7 @@ class Features extends Component {
     // sets the user input buddy ID
     this.setState({buddyID});
   };
+
   handleChangeAPIKey = APIKey => {
     // sets the user input API Key
     this.setState({APIKey});
@@ -187,6 +199,7 @@ class Features extends Component {
       APIKey,
       actionComplete,
     } = this.state;
+
     const {
       handleChangeBuddyID,
       handleChangeBuddyName,
@@ -201,11 +214,13 @@ class Features extends Component {
       slangOnUtteranceDetected,
       slangCancel,
     } = this;
+
     const settingsState = {
       buddyName,
       buddyID,
       APIKey,
     };
+
     const settingsProps = {
       styles,
       handleChangeBuddyName,
@@ -214,16 +229,19 @@ class Features extends Component {
       handleReInit,
       state: settingsState,
     };
+
     const testIntentState = {
       intentName,
       utterance,
       entities,
       isInit,
     };
+
     const testIntentProps = {
       styles,
       state: testIntentState,
     };
+
     const featuresListProps = {
       utterance,
       actionComplete,
